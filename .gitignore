@@ -1,0 +1,5 @@
+## SDLTempProjects
+*.exe
+*.dll
+SDLTempProjects/lib/
+SDLTempProjects/include/sdl/.vscode/
