@@ -1,10 +1,9 @@
-# My game 1_2_3
-
+# My game 1
+This game is about Andrew Tate's daily adventure
 ---
 
-## DESC
-asdkhasbdk [asd](https://google.com)
+## DESCRIPTION
 
 ## Installation
-
+asd(https://www.youtube.com/watch?v=x-wf8Yb5ZCM)
 ## Objectives

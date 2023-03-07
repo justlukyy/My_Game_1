@@ -3,6 +3,7 @@
 #include<SDL_image.h>
 
 #include"RenderWindow.hpp"
+#include"entity.hpp"
 int main(int argc , char* argv[]){
     if (SDL_Init(SDL_INIT_VIDEO)> 0)
         std::cout << "SDL_Init has failed . SDL Error is: " << SDL_GetError() << std::endl;
@@ -13,6 +14,8 @@ int main(int argc , char* argv[]){
 
     SDL_Texture* characterTexture = window.loadTexture("res/img/ground_grass_1.png");
 
+   Entity first_platform(100,100,characterTexture);
+
     bool gameRunning = true;
     
     SDL_Event event;
@@ -22,7 +25,7 @@ int main(int argc , char* argv[]){
                 gameRunning = false;
         }
         window.clear();
-        window.render(characterTexture);
+        window.render(first_platform);
         window.display();
     }
 
