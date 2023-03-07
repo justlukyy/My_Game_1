@@ -5,5 +5,5 @@ This game is about Andrew Tate's daily adventure
 ## DESCRIPTION
 
 ## Installation
-asd(https://www.youtube.com/watch?v=x-wf8Yb5ZCM)
+watch this(https://www.youtube.com/watch?v=YQ-qToZUybM)
 ## Objectives
