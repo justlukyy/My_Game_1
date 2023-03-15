@@ -17,7 +17,7 @@ int main(int argc , char* argv[]){
     
 
 
-    SDL_Texture* characterTexture = window.loadTexture("res/img/ground_grass_1.png");
+    SDL_Texture* characterTexture = window.loadTexture("res/img/MyG3.png");
 
         
     std::vector<Entity> entitiies = {   Entity(Vector2f(0,0),characterTexture),
