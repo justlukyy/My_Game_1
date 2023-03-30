@@ -7,6 +7,9 @@
 #include"RenderWindow.hpp"
 #include"entity.hpp"
 #include"Math.hpp"
+
+
+
 int main(int argc , char* argv[]){
     if (SDL_Init(SDL_INIT_VIDEO)> 0)
         std::cout << "SDL_Init has failed . SDL Error is: " << SDL_GetError() << std::endl;
@@ -17,15 +20,17 @@ int main(int argc , char* argv[]){
     
 
 
-    SDL_Texture* characterTexture = window.loadTexture("res/img/MyG3.png");
+    SDL_Texture* characterTexture = window.loadTexture("res/img/MyG_Standing.png");
+    SDL_Texture* backgroundTexture = window.loadTexture("res/img/ground_grass_1.png");
+
 
         
-    std::vector<Entity> entitiies = {   Entity(Vector2f(0,0),characterTexture),
-                                        Entity(Vector2f(30,30),characterTexture),
-                                        Entity(Vector2f(60,60),characterTexture)};
+std::vector<Entity> entitiies = {   Entity(Vector2f(0,0),backgroundTexture),
+                                    Entity(Vector2f(30,30),backgroundTexture),
+                                    Entity(Vector2f(60,60),backgroundTexture)};
     {
-        Entity tate(Vector2f(300,50), characterTexture) ;
-        entitiies.push_back(tate) ; 
+        Entity Tate(Vector2f(300,50), characterTexture) ;
+        entitiies.push_back(Tate) ; 
     }
     bool gameRunning = true;
     
