@@ -23,7 +23,7 @@ public:
 
 	void Move(const int& acceleration);
 
-	void Render(SDL_Renderer* gRenderer, SDL_Rect* currentClip = nullptr);
+	void Render(SDL_Renderer* gRenderer, SDL_Rect* currentClip = NULL);
 
 	int GetType();
 

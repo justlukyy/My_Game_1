@@ -1,8 +1,5 @@
 #include "Game_Utils.h"
-#include <SDL.h>
-#include <SDL_image.h>
-#include <SDL_ttf.h>
-#include <SDL_mixer.h>
+
 std::string GetHighScoreFromFile(std::string path)
 {
 	std::fstream HighScoreFile;

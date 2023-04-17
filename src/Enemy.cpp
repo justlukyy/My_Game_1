@@ -1,8 +1,5 @@
 #include "Enemy.h"
-#include <SDL.h>
-#include <SDL_image.h>
-#include <SDL_ttf.h>
-#include <SDL_mixer.h>
+
 Enemy::Enemy(int _type)
 {
 	posX = 0;
@@ -23,7 +20,7 @@ Enemy::Enemy(int _type)
 		posY = GROUND - 8;
 	}
 
-	EnemyTexture = nullptr;
+	EnemyTexture = NULL;
 }
 
 Enemy::~Enemy()
@@ -35,18 +32,18 @@ Enemy::~Enemy()
 	eHeight = 0;
 
 	type = 0;
-	if (EnemyTexture != nullptr)
+	if (EnemyTexture != NULL)
 	{
-		EnemyTexture = nullptr;
+		EnemyTexture = NULL;
 	}
 }
 
 void Enemy::LoadFromFile(std::string path, SDL_Renderer* gRenderer)
 {
-	SDL_Texture* tmpTexture = nullptr;
+	SDL_Texture* tmpTexture = NULL;
 
 	SDL_Surface* tmpSurface = IMG_Load(path.c_str());
-	if (tmpSurface == nullptr)
+	if (tmpSurface == NULL)
 	{
 		LogError("Can not load image.", IMG_ERROR);
 	}
@@ -55,7 +52,7 @@ void Enemy::LoadFromFile(std::string path, SDL_Renderer* gRenderer)
 		SDL_SetColorKey(tmpSurface, SDL_TRUE, SDL_MapRGB(tmpSurface->format, 0, 255, 255));
 
 		tmpTexture = SDL_CreateTextureFromSurface(gRenderer, tmpSurface);
-		if (tmpTexture == nullptr)
+		if (tmpTexture == NULL)
 		{
 			LogError("Can not create texture from surface.", SDL_ERROR);
 		}
@@ -88,7 +85,7 @@ void Enemy::Move(const int &acceleration)
 void Enemy::Render(SDL_Renderer* gRenderer, SDL_Rect* currentClip)
 {
 	SDL_Rect renderSpace = { posX, posY, eWidth, eHeight };
-	if (currentClip != nullptr)
+	if (currentClip != NULL)
 	{
 		renderSpace.w = currentClip->w;
 		renderSpace.h = currentClip->h;

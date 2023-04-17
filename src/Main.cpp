@@ -20,15 +20,15 @@ const std::string LAYER[BACKGROUND_LAYER] = {
 	"res/img/background/layer09.png",
 };
 
-SDL_Window* gWindow = nullptr;
-SDL_Renderer* gRenderer = nullptr;
+SDL_Window* gWindow = NULL;
+SDL_Renderer* gRenderer = NULL;
 SDL_Color textColor = { 0, 0, 0 };
-TTF_Font* gFont = nullptr;
-Mix_Music* gMusic = nullptr;
-Mix_Music* gMenuMusic = nullptr;
-Mix_Chunk* gClick = nullptr;
-Mix_Chunk* gJump = nullptr;
-Mix_Chunk* gLose = nullptr;
+TTF_Font* gFont = NULL;
+Mix_Music* gMusic = NULL;
+Mix_Music* gMenuMusic = NULL;
+Mix_Chunk* gClick = NULL;
+Mix_Chunk* gJump = NULL;
+Mix_Chunk* gLose = NULL;
 
 SDL_Rect gPlayButton[BUTTON_TOTAL];
 SDL_Rect gHelpButton[BUTTON_TOTAL];
@@ -175,7 +175,7 @@ int main(int argc, char* argv[])
 
 
 						character.Move();
-						SDL_Rect* currentClip_Character = nullptr;
+						SDL_Rect* currentClip_Character = NULL;
 						if (character.OnGround())
 						{
 							currentClip_Character = &gCharacterClips[frame_Character / SLOW_FRAME_CHAR];
@@ -304,36 +304,36 @@ bool LoadMedia()
 {
 	bool success = true;
 
-	gMusic = Mix_LoadMUS("res/sound/bkgr_audio.wav");
-	if (gMusic == nullptr)
+	gMusic = Mix_LoadMUS("res/sound/background_audio.wav");
+	if (gMusic == NULL)
 	{
 		LogError("Failed to load background music", MIX_ERROR);
 		success = false;
 	}
 
 	gMenuMusic = Mix_LoadMUS("res/sound/menu_audio.wav");
-	if (gMenuMusic == nullptr)
+	if (gMenuMusic == NULL)
 	{
 		LogError("Failed to load menu music", MIX_ERROR);
 		success = false;
 	}
 
 	gClick = Mix_LoadWAV("res/sound/mouse_click.wav");
-	if (gClick == nullptr)
+	if (gClick == NULL)
 	{
 		LogError("Failed to load mouse click sound", MIX_ERROR);
 		success = false;
 	}
 
 	gJump = Mix_LoadWAV("res/sound/jump_sound.wav");
-	if (gJump == nullptr)
+	if (gJump == NULL)
 	{
 		LogError("Failed to load jumping sound", MIX_ERROR);
 		success = false;
 	}
 
 	gLose = Mix_LoadWAV("res/sound/lose_sound.wav");
-	if (gLose == nullptr)
+	if (gLose == NULL)
 	{
 		LogError("Failed to load lose sound", MIX_ERROR);
 		success = false;
@@ -560,17 +560,17 @@ void Close()
 	Mix_FreeChunk(gClick);
 	Mix_FreeChunk(gLose);
 	Mix_FreeChunk(gJump);
-	gMusic = nullptr;
-	gMenuMusic = nullptr;
-	gClick = nullptr;
-	gLose = nullptr;
-	gJump = nullptr;
+	gMusic = NULL;
+	gMenuMusic = NULL;
+	gClick = NULL;
+	gLose = NULL;
+	gJump = NULL;
 
 	SDL_DestroyRenderer(gRenderer);
-	gRenderer = nullptr;
+	gRenderer = NULL;
 
 	SDL_DestroyWindow(gWindow);
-	gWindow = nullptr;
+	gWindow = NULL;
 
 	IMG_Quit();
 	Mix_Quit();

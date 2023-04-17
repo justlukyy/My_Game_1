@@ -1,8 +1,5 @@
 #include "Button.h"
-#include <SDL.h>
-#include <SDL_image.h>
-#include <SDL_ttf.h>
-#include <SDL_mixer.h>
+
 Button::Button()
 {
 	position.x = 0;

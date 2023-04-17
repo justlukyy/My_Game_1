@@ -73,14 +73,14 @@ void GenerateEnemy(Enemy& enemy1,
 bool CheckColission(Character character,
     SDL_Rect* char_clip,
     Enemy enemy,
-    SDL_Rect* enemy_clip = nullptr);
+    SDL_Rect* enemy_clip = NULL);
 
 bool CheckEnemyColission(Character character,
     Enemy enemy1,
     Enemy enemy2,
     Enemy enemy3,
     SDL_Rect* char_clip,
-    SDL_Rect* enemy_clip = nullptr);
+    SDL_Rect* enemy_clip = NULL);
 
 void ControlCharFrame(int& frame);
 

@@ -1,8 +1,5 @@
 #include "Character.h"
-#include <SDL.h>
-#include <SDL_image.h>
-#include <SDL_ttf.h>
-#include <SDL_mixer.h>
+
 Character::Character()
 {
 	posX = SCREEN_WIDTH - 700;
@@ -22,7 +19,7 @@ void Character::HandleEvent(SDL_Event& e, Mix_Chunk *gJump)
 	{
 		switch (e.key.keysym.sym)
 		{
-			case SDLK_UP:
+			case SDLK_SPACE:
 			{
 				if (OnGround())
 				{

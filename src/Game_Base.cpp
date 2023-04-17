@@ -1,8 +1,5 @@
 #include "Game_Base.h"
-#include <SDL.h>
-#include <SDL_image.h>
-#include <SDL_ttf.h>
-#include <SDL_mixer.h>
+
 void LogError(std::string msg, int error_code)
 {
 	if (error_code == SDL_ERROR)
