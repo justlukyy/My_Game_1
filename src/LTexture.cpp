@@ -31,14 +31,14 @@ bool LTexture::LoadFromRenderedText(std::string textureText,TTF_Font *gFont, SDL
 	SDL_Surface* textSurface = TTF_RenderText_Solid(gFont, textureText.c_str(), textColor);
 	if (textSurface == NULL)
 	{
-		printf("Unable to render text surface! SDL_ttf Error: %s\n", TTF_GetError());
+		std::cout << "Unable to render text surface! SDL_ttf Error: " << TTF_GetError();
 	}
 	else
 	{
 		mTexture = SDL_CreateTextureFromSurface(gRenderer, textSurface);
 		if (mTexture == NULL)
 		{
-			printf("Unable to create texture from rendered text! SDL Error: %s\n", SDL_GetError());
+			std::cout << "Unable to create texture from rendered text! SDL Error: " <<  SDL_GetError();
 		}
 		else
 		{

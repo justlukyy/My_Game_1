@@ -70,13 +70,13 @@ int main(int argc, char* argv[])
 {
 	if (!Init())
 	{
-		printf("Failed to initialize!\n");
+		std::cout << "Failed to initialize!";
 	}
 	else
 	{
 		if (!LoadMedia())
 		{
-			printf("Failed to load media!\n");
+			std::cout << "Failed to load media!";
 		}
 		else
 		{
@@ -284,13 +284,13 @@ bool Init()
 
 				if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048) < 0)
 				{
-					printf("SDL_mixer could not initialize! SDL_mixer Error: %s\n", Mix_GetError());
+					std::cout << "SDL_mixer could not initialize! SDL_mixer Error: " <<  Mix_GetError();
 					success = false;
 				}
 
 				if (TTF_Init() == -1)
 				{
-					printf("SDL_ttf could not initialize! SDL_ttf Error: %s\n", TTF_GetError());
+					std::cout << "SDL_ttf could not initialize! SDL_ttf Error: " <<  TTF_GetError();
 					success = false;
 				}
 			}
