@@ -6,9 +6,9 @@
 class LTexture
 {
 public:
-	LTexture();
+	LTexture(); // Constructor
 
-	~LTexture();
+	~LTexture(); // Destructor
 
 	void Free();
 

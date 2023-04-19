@@ -46,7 +46,7 @@
 #define SMALL_BUTTON 1
 #define COMMON_BUTTON 2
 
-const std::string WINDOW_TITLE = "Dino in jungle";
+const std::string WINDOW_TITLE = "Nighty Dino";
 
 const int SCREEN_WIDTH = 928;
 const int SCREEN_HEIGHT = 522;
